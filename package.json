@@ -1,6 +1,7 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "@zesty-io/nuxt-starter",
+  "license": "Commons Clause License Condition v1.0",
+  "author": "Zesty.io<developers@zesty.io>",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -16,7 +17,6 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@agalin920/app-sdk": "^1.0.0-alpha.1",
     "@zesty-io/vue-app-loader": "file:../vue-app-loader/zesty-io-vue-app-loader-1.0.0-alpha.1.tgz"
   }
 }
