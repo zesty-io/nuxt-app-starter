@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+## Overview
+Nuxt App Starter is a pre-configured Nuxt.js application that integrates with the Zesty.io Vue SDK Plugin. It serves as a foundation for building applications with features like SSO authentication and SDK state management.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Features
+- __Integrated Zesty.io Vue SDK Plugin__: Pre-configured to work with the Zesty.io Vue SDK.
+- __SSO Authentication__: Supports Google, Microsoft, and GitHub for Single Sign-On.
+- __Reactive Authentication State__: Easily manage and display authentication states.
 
-## Setup
 
-Make sure to install the dependencies:
+## Configuration
+The Nuxt App Starter is pre-configured with a default authentication service URL and cookie name. Modify these values in the plugin file to suit your setup.
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+## Plugin Configuration (plugin file)
+```javascript
+nuxtApp.vueApp.use(createAppLoader, {
+  authServiceUrl: "https://auth.api.dev.zesty.io", // Change this URL
+  authCookie: "DEV_APP_SID", // Change cookie name if needed
+});
 ```
 
-## Development Server
+## Customizing SSO Providers
+You can customize the list of SSO providers in App.vue:
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```js
+const providers = ref(['google', 'microsoft', 'github']); // Modify as needed
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
